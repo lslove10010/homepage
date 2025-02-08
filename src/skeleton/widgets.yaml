@@ -3,6 +3,15 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - resources:
+- openmeteo:
+    label: 南宁 # 可选
+    latitude: 22.8173 # 南宁的纬度
+    longitude: 108.3661 # 南宁的经度
+    timezone: Asia/Shanghai # 时区（可选）
+    units: metric # 或 imperial
+    cache: 5 # 缓存时间（分钟），避免超出 API 限制
+    format: # 可选，Intl.NumberFormat 配置
+      maximumFractionDigits: 1
 
 - search:
     provider: duckduckgo
