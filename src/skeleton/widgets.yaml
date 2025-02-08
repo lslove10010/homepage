@@ -3,9 +3,6 @@
 # https://gethomepage.dev/configs/info-widgets/
 
 - resources:
-    cpu: true
-    memory: true
-    disk: /
 
 - search:
     provider: duckduckgo
