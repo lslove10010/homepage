@@ -1,18 +1,103 @@
 ---
 # For configuration options and examples, please see:
-# https://gethomepage.dev/configs/services/
+# https://gethomepage.dev/configs/services
+- NAS:
+    
+    - 群晖:
+        icon: https://img.icons8.com/?size=80&id=3HiGHOeRVImh&format=png
+        href: https://nas.nas3.eu.org/
+        description: 群晖
+        
+    - blog-nas:
+        icon: https://www.bt.cn/static/new/images/logo.png
+        href: https://baota.nas3.eu.org/btpanel
+        description: baota-nas
 
-- My First Group:
-    - My First Service:
-        href: http://localhost/
-        description: Homepage is awesome
+    - baota-nas:
+        icon: https://www.bt.cn/static/new/images/logo.png
+        href: https://baota.nas3.eu.org/btpanel
+        description: baota-nas
 
-- My Second Group:
-    - My Second Service:
-        href: http://localhost/
-        description: Homepage is the best
 
-- My Third Group:
-    - My Third Service:
-        href: http://localhost/
-        description: Homepage is 😎
+    - dpanel:
+        icon: https://alist.tangxiaowu.eu.org/d/onedrive%E8%BD%AF%E4%BB%B6/%E5%9B%BE%E7%89%87/dpanel.png?sign=WLMONEfuh9dZkM0CXi-JbMQ7dvnqgnAZ-ySRYlZNKZ4=:0
+        href: https://dpanel.nas3.eu.org
+        description: 群晖-depanel
+
+
+    - lucky:
+        icon: https://www.lucky666.cn/img/logo.svg
+        href: https://lucky.nas3.eu.org/lucky666
+        description: 群晖-lucky
+
+
+    - blog-box:
+        icon: https://img.icons8.com/?size=80&id=XxwC66aS2ocT&format=png
+        href: https://blog.li0102.site/
+        description: 我的博客
+        
+    - baota-box:
+        icon: https://www.bt.cn/static/new/images/logo.png
+        href: https://baota.li0102.site/btpanel
+        description: baota-box
+
+    - alist:
+        icon: https://alist.nn.ci/logo.svg
+        href: https://alist.tangxiaowu.eu.org/
+        description: 我的网盘
+
+
+
+
+
+- 影视站:
+    - 我的影视站①:
+        icon: https://img.icons8.com/?size=80&id=9DyIYsXFZTXE&format=png
+        href: https://video.nas3.eu.org/
+        description: 我的影视站①_nas-video
+
+        
+
+    - 我的影视站②:
+        icon: https://img.icons8.com/?size=80&id=9DyIYsXFZTXE&format=png
+        href: https://yingshi.li0102.site/
+        description: 我的影视站②_box-video
+
+
+    - 我的影视站③:
+        icon: https://img.icons8.com/?size=80&id=9DyIYsXFZTXE&format=png
+        href: https://video.li0102.site/
+        description: 我的影视站③_serv00-video
+
+
+    - 我的影视站④:
+        icon: https://img.icons8.com/?size=80&id=9DyIYsXFZTXE&format=png
+        href: https://tryin.freewebhostmost.com/
+        description: 我的影视站④_tryin-video
+
+
+- 其他:
+    - 我的网页监控站:
+        icon: https://static-00.iconduck.com/assets.00/uptime-kuma-icon-512x469-ce3ut52z.png
+        href: https://uptime.seewo.eu.org/
+        description: 我的网页监控站
+
+        
+
+    - 我的脚本运行站:
+        icon: https://img.icons8.com/?size=64&id=Nkym0Ujb8VGI&format=png
+        href: https://uptime.gl.edu.eu.org/
+        description: 我的脚本运行站
+
+
+    - github代理-CF:
+        icon: https://img.icons8.com/fluency/48/cloud-connection.png
+        href: https://ghp.seewo.eu.org/
+        description: github,google,youtube
+
+
+
+    - github代理-deno:
+        icon: https://img.icons8.com/fluency/48/cloud-connection.png
+        href: https://ghp-free.deno.dev/
+        description: github,google,youtube
