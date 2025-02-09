@@ -9,7 +9,7 @@ providers:
 title: 我的导航页
 
 background:  
-  image: https://www.bing.com/th?id=OHR.WatSriSawai_ZH-CN7688908090_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp  
+  image: https://api.vvhan.com/api/bing?size=1920
   blur: sm 
   saturate: 50
   brightness: 50
