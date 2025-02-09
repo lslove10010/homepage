@@ -13,6 +13,15 @@
     format: # 可选，Intl.NumberFormat 配置
       maximumFractionDigits: 1
 
+- datetime:
+    text_size: xl    
+    locale: zh-CN # 修改为中文
+    format:
+      dateStyle: long # 长日期格式
+      timeStyle: long # 长时间格式
+      timeZone: Asia/Shanghai # 修改为北京时间时区
+
+
 - search:
     provider: duckduckgo
     target: _blank
