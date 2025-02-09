@@ -1,7 +1,16 @@
 ---
 # For configuration options and examples, please see:
 # https://gethomepage.dev/configs/settings/
-locale: zh-CN # 修改为中文
+language: zh-CN # 修改为中文
 providers:
   openweathermap: openweathermapapikey
   weatherapi: weatherapiapikey
+
+title: 我的导航页
+
+background:  
+  image: https://www.bing.com/th?id=OHR.WatSriSawai_ZH-CN7688908090_1920x1080.jpg&rf=LaDigue_1920x1080.jpg&pid=hp  
+  blur: sm 
+  saturate: 50
+  brightness: 50
+  opacity: 50
