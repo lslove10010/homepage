@@ -97,6 +97,10 @@ Each service can have multiple widgets attached to it, for example:
         slug: statuspageslug
 ```
 
+!!! note
+
+      Multiple widgets per service are not yet supported with Kubernetes ingress annotations.
+
 #### Field Visibility
 
 Each widget can optionally provide a list of which fields should be visible via the `fields` widget property. If no fields are specified, then all fields will be displayed. The `fields` property must be a valid YAML array of strings. As an example, here is the entry for Sonarr showing only a couple of fields.
@@ -113,6 +117,47 @@ Each widget can optionally provide a list of which fields should be visible via 
       url: http://sonarr.host.or.ip
       key: apikeyapikeyapikeyapikeyapikey
 ```
+
+### Block Highlighting
+
+Widgets can tint their metric block text automatically based on rules defined alongside the service. Attach a `highlight` section to the widget configuration and map each block to one or more numeric or string rules using the field key (for example, `queued`, `lan_users`).
+
+```yaml
+- Sonarr:
+    icon: sonarr.png
+    href: http://sonarr.host.or.ip
+    widget:
+      type: sonarr
+      url: http://sonarr.host.or.ip
+      key: ${SONARR_API_KEY}
+      highlight:
+        queued:
+          numeric:
+            - level: danger
+              when: gte
+              value: 20
+            - level: warn
+              when: gte
+              value: 5
+            - level: good
+              when: eq
+              value: 0
+        status:
+          string:
+            - level: danger
+              when: regex
+              value: "(failed|import) pending"
+            - level: good
+              when: equals
+              value: "All good"
+        status_code:
+          string:
+            - level: warn
+              when: regex
+              value: "^5\\d{2}$"
+```
+
+Supported numeric operators for the `when` property are `gt`, `gte`, `lt`, `lte`, `eq`, `ne`, `between`, and `outside`. String rules support `equals`, `includes`, `startsWith`, `endsWith`, and `regex`. Each rule can be inverted with `negate: true`, and string rules may pass `caseSensitive: true` or custom regex `flags`. The highlight engine does its best to coerce formatted values, but you will get the most reliable results when you pass plain numbers or strings into `<Block>`.
 
 ## Descriptions
 
@@ -177,6 +222,10 @@ To use a local icon, first create a Docker mount to `/app/public/icons` and then
 ## Ping
 
 Services may have an optional `ping` property that allows you to monitor the availability of an external host. As of v0.8.0, the ping feature attempts to use a true (ICMP) ping command on the underlying host. Currently, only IPv4 is supported.
+
+!!! note
+
+      Because ping uses the ping command on the underlying host, in some cases you may need to install e.g. the `iputils-ping` package on the host system.
 
 ```yaml
 - Group A:
